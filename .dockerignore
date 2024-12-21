@@ -1,0 +1,23 @@
+# Ignore node_modules
+node_modules
+
+# Ignore log files
+*.log
+
+# Ignore environment variables file
+.env
+
+# Ignore Docker files
+Dockerfile
+Dockerfile.dev
+Dockerfile.development
+docker-compose.yml
+
+# Ignore VSCode settings
+.vscode
+
+# Ignore other files
+.git
+.gitignore
+npm-debug.log
+.DS_Store

@@ -1,0 +1,23 @@
+# Use the official Node.js image (LTS version)
+FROM node:lts-iron
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+RUN npm i -g pnpm
+
+# Copy package.json and pnpm-lock.json
+COPY package*.json ./
+COPY pnpm-lock.yaml ./
+
+# Install dependencies
+RUN pnpm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the ports the app and debugger run on
+EXPOSE 3000 9229
+
+# Command to run the application in debug mode
+CMD ["node", "--inspect=0.0.0.0:9229", "src/index.js"]
