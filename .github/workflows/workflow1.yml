@@ -24,3 +24,4 @@ jobs:
           echo "Secret: $SECRET_1"
           echo "Environment Variable: $ENV_1"
           echo "Environment Variable: $ENV_2"
+          echo "Environment Variable: $ENV_3"
