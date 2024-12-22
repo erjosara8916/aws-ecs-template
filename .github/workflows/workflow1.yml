@@ -17,6 +17,7 @@ jobs:
         env:
           ENV_1: ${{ vars.ENV_1 }}
           ENV_2: ${{ vars.ENV_1 }}-another-text
+          ENV_3: my-value
           SECRET_1: ${{ secrets.SECRET_1 }}
         run: |
           echo "Workflow 1 was executed"
