@@ -14,6 +14,9 @@ jobs:
 
       - name: Print message
         run: |
-          echo "Workflow 2 was executed"
+          echo "Workflow 1 was executed"
           echo "Secret: ${{ secrets.SECRET_1 }}"
           echo "Environment Variable: ${{ vars.ENV_1 }}"
+        env:
+          ENV_1: ${{ vars.ENV_1 }}
+          SECRET_1: ${{ secrets.SECRET_1 }}
