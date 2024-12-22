@@ -7,6 +7,7 @@ on:
 
 jobs:
   print-message:
+    environment: master
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
